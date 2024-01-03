@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 45deg;
+}
+
+:root {
+  /* color */
+  --yellow: #ffc73c;
+  --orange: #ff9a3c;
+
+  --aqua: #59ffb9;
+  --blue: #326cff;
+  --white: #fff;
+  --black: #212427;
+
+  /* angle */
+  --angle: 45deg;
+  --primary-gradient: linear-gradient(
+    var(--angle),
+    var(--blue) 0%,
+    var(--aqua) 100%
+  );
+
+  /* font */
+  --font-family: "Montserrat", sans-serif;
+
+  /* width */
+  --max-w: 1440px;
+
+  /* border */
+  --border-r-small: 4px;
+}
+* {
+  font-family: var(--font-family);
+}
+
+body {
+  min-height: 2000px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.max-w {
+  max-width: 1440px;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.border-r-small {
+  border-radius: var(--border-r-small);
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+h1 {
+  font: 700 50px/64px var(--font-family);
+}
+h2 {
+  font: 400 32px/40px var(--font-family);
+}
+h3 {
+  font: 400 24px/30px var(--font-family);
+}
+h4 {
+  font: 700 16px/30px var(--font-family);
+}
+
+p {
+  font: 400 18px/27px var(--font-family);
+}
+
+a {
+  font: 500 16px/24px var(--font-family);
+}
+button {
+  border: none;
+  background: none;
+}
+.text-white {
+  color: var(--white);
+}
+
+.text-orange {
+  color: var(--orange);
+}
+.text-yellow {
+  color: var(--yellow);
+}
+
+.text-dark {
+  color: var(--black);
+}
+
+.text-aqua {
+  color: var(--blue);
+}
+.text-blue {
+  color: var(--blue);
+}
+
+.heading-1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+.heading-2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.text-shadow {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.card {
+  background: var(--primary-gradient);
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: none;
+}
+.btn-primary {
+  padding: 10px 20px;
+  background: var(--primary-gradient);
+  color: #fff;
+  transition: var(--angle) 0.5s;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  --angle: 45deg;
+}
+.btn-primary:active {
+  --angle: 45deg;
+  /* background: var(--primary-gradient-reverse); */
+}
+
+.btn-primary:focus {
+  --angle: -45deg;
+  /* background: var(--primary-gradient-reverse); */
+}
+
+.btn-secondary {
+  padding: 15px 25px;
+  background: var(--yellow);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.btn-secondary:hover {
+  background: var(--orange);
+}
+
+.btn-secondary:active {
+  background: var(--orange);
+}
+.btn-secondary:focus {
+  background: var(--orange);
+}
+
+.navbar__logo {
+  font: 700 50px/50px var(--font-family);
+  color: var(--off-white);
+}
+
+.navbar__logo:hover {
+  color: var(--off-white);
+}
+
+.navbar__logo-point {
+  color: var(--soft-blue);
+}
+
+.hero__overlay-img {
+  width: 100%;
+  min-height: 80vh;
+}
+
+@media screen and (max-width: 768px) {
+  .hero__overlay {
+    left: calc(-100% + 120px);
+    top: 300px;
+  }
+  .about {
+    margin-top: 500px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .heading-1 {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .heading-2 {
+    font-size: 24px;
+    font-weight: 800;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .heading-1 {
+    font-size: 28px;
+    font-weight: 800;
+  }
+  .heading-2 {
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .about {
+    margin-top: 500px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about {
+    margin-top: 300px;
+  }
+}
